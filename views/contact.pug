@@ -1,0 +1,14 @@
+html
+  head
+    title= title
+    link(href='styles.css', rel='stylesheet')
+  body
+    h1= heading
+    p Made by 
+      a(href= githubUrl) #{author}.
+    
+    nav Navigation:
+      ul
+        for n in nav
+          li
+            a(href= n.link) #{n.pageName}

@@ -1,0 +1,26 @@
+{
+	"name": "whatAboutPug",
+	"version": "0.0.1",
+	"description": "Learning Pug Interactively",
+	"main": "server.js",
+	"scripts": {
+		"start": "node --harmony server.js"
+	},
+	"dependencies": {
+		"express": "latest",
+		"pug": "latest"
+	},
+	"engines": {
+		"node": "6"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://hyperdev.com/#!/project/welcome-project"
+	},
+	"keywords": [
+		"learn",
+		"pug",
+		"interactively"
+	],
+	"license": "MIT"
+}
