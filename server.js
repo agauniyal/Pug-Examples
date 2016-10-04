@@ -4,8 +4,13 @@
 const express = require('express');
 const pug = require('pug');
 
-// require routes
-const routes = require('./routes.js');
+
+let locals = {
+  title: "Let's learn Pug",
+  heading: 'Welcome to Index page',
+  webUrl: 'https://pugjs.org/api/getting-started.html',
+  githubUrl: 'https://github.com/pugjs/pug'
+};
 
 // Let's create an app out of express
 const app = express();
@@ -13,13 +18,10 @@ const app = express();
 // Let's use pug
 app.set('view engine', 'pug');
 
-// serve static files from 'public' directory
-app.use(express.static('public'));
-
 // some default routes - defined in routes.js
-app.get('/', routes.index);
-app.get('/hello', routes.hello);
-app.get('/contact', routes.contact);
+app.get('/', function(request, response){
+  response.render('index', locals);
+});
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
